@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Strings</title>
+  </head>
+  <body>
+    <script>
+      let a = "Javascript is awesome";
+      // console.log(a.length);
+
+      // console.log(a.indexOf("s")) //first occurrence
+      //   console.log(a.lastIndexOf("s")); //last occurrence
+
+      // console.log(a.lastIndexOf("A")) //-1
+
+      // console.log(a.indexOf("J"))
+      // console.log(a.lastIndexOf("J"))
+
+      //   console.log(a.slice(5, 10));
+
+      //   console.log(a.slice(10, 20));
+
+      //   console.log(a.slice(20,10));
+
+      //   console.log(a.slice(-10, -5));
+
+      //   var print;
+      //   for (var i = 0; i < 3; i++) {
+      //     print = function () {
+      //       console.log(i);
+      //     };
+      //   }
+      //   var myObject = { print: print };
+      //   myObject.print();
+
+      //   let x = 1;
+      //   for (let i = 1; i <= 5; i++) {
+      //     for (let j = i + 1; j <= 5; j++) {
+      //      x = x + i;
+      //     }
+      //   }
+      //   console.log(x);
+
+      //   const num = [56, 15, 1, 88, 12, 15, 67, 66];
+
+      //   for (let i = 0; i < num.length; i++) {
+      //     for (let j = 0; j < num.length; j++) {
+      //       if (num[i] < num[j]) {
+      //         let temp = num[i];
+      //         num[i] = num[j];
+      //         num[j] = temp;
+      //       }
+      //     }
+      //   }
+
+      //   let str = "The quick brown fox jumps over the lazy dog";
+      //   let result = str.replace(/o/g, "0").split(" ").slice(4, 7).join("-");
+      //   console.log(result);
+
+      //   let text = "JavaScript is awesome. JavaScript is fun.";
+      //   let result =
+      //     text.replaceAll("JavaScript", "JS").indexOf("awesome") -
+      //     text.lastIndexOf("is");
+      //   console.log(result);
+
+      //   let phrase = "Hello, World!";
+      //   let result = phrase.slice(-6, -1).split("").reverse().join("+");
+      //   console.log(result); //d+l+r+o+W
+
+      // let arr = [1, 2, 3, 4, 5];
+      // arr.push(6);
+      // arr.unshift(0);
+      // arr.pop();
+      //splice returns the removed elements in an array
+      // let result = arr.shift() + arr.splice(2, 2)[0];
+      // console.log(result);
+      // console.log(arr);
+
+      //   let fruits = ["apple", "banana", "cherry"];
+      //   fruits.push("date");
+      //   fruits.unshift("apricot");
+      //   fruits.splice(2, 1, "blueberry", "elderberry");
+      //   console.log(fruits.length);
+      //   console.log(fruits[2]);
+
+      let numbers = [10, 20, 30, 40, 50];
+      numbers.push(60, 70);
+      numbers.shift();
+      numbers.unshift(5, 15); //[5,15,50,60,70]
+      let result = numbers.splice(2, 3).reduce((a, b) => a + b, 0);
+
+      //   [20,30,40].reduce((a, b) => {
+      //     return a + b;
+      //   }, 0);
+    //   console.log(result);
+    //   console.log(numbers);
+
+
+
+
+      let queue = ["Tom", "Jack", "Sarah"];
+      queue.push("Emma");
+      queue.shift();
+      queue.unshift("Mike");
+      queue.splice(1, 1, "Anna", "Chris");
+      console.log(queue.length); //5
+      console.log(queue[2]); //Chris
+    </script>
+  </body>
+</html>
