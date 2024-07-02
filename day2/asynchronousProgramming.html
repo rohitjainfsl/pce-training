@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Async Programming</title>
+  </head>
+  <body>
+    <!-- <button>Click me</button> -->
+
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+    <script>
+      //Async programming: to break the flow of execution.
+      // sum()
+      // multiply()
+
+      //   const btn = document.querySelector("button");
+      //   const para = document.querySelector("p");
+      //   btn.addEventListener("click", print);
+
+      //   function print() {
+      //     setInterval(printName, 2000);
+      //   }
+      //   function printName() {
+      //     // para.innerHTML = "Neend aa gayi";
+      //     console.log("Chutti hone wali hai");
+      //   }
+
+      const start = document.querySelector("#start");
+      const stop = document.querySelector("#stop");
+      let i = 1;
+
+      start.addEventListener("click", printCounting);
+
+      function printCounting() {
+        const id = setInterval(() => {
+          if (i >= 10) {
+            clearInterval(id);
+          }
+          console.log(i++);
+        }, 1000);
+      }
+    </script>
+  </body>
+</html>
