@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Creating Element with JS</title>
+  </head>
+  <body>
+    <button>Click Me</button>
+
+    <script>
+      const btn = document.querySelector("button");
+      //   const para = document.querySelector("p");
+
+      const para = document.createElement("p"); // <p></p>
+
+      btn.addEventListener("click", printName);
+      function printName(e) {
+        para.innerHTML = "Javascript is Awesome"; // <p>Javascript is Awesome</p>
+        document.body.append(para);
+      }
+    </script>
+  </body>
+</html>

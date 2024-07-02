@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Calculator</title>
+  </head>
+  <body>
+    <input type="text" placeholder="Enter Number 1" id="num1" />
+    <input type="text" placeholder="Enter Number 2" id="num2" />
+    <select name="" id="">
+      <option value="" selected disabled>Operation</option>
+      <option value="+">Addition</option>
+      <option value="-">Subtraction</option>
+      <option value="/">Division</option>
+      <option value="*">Multiplication</option>
+      <option value="%">Modulus</option>
+    </select>
+    <p></p>
+
+    <script>
+      const num1 = document.querySelector("#num1");
+      const num2 = document.querySelector("#num2");
+      const select = document.querySelector("select");
+      const para = document.querySelector("p");
+
+      select.addEventListener("change", performCalulation);
+
+      function performCalulation(e) {
+        if (e.target.value === "+") {
+          para.innerHTML = Number(num1.value) + Number(num2.value);
+        } else if (e.target.value === "-") {
+          para.innerHTML = num1.value - num2.value;
+        } else if (e.target.value === "/") {
+          para.innerHTML = num1.value / num2.value;
+        } else if (e.target.value === "*") {
+          para.innerHTML = num1.value * num2.value;
+        } else if (e.target.value === "%") {
+          para.innerHTML = num1.value % num2.value;
+        }
+ 
+        //DO THIS WITH SWITCH
+
+        switch (e.target.value) {
+          case "+":
+            para.innerHTML = Number(num1.value) + Number(num2.value);
+            break;
+
+          case "-":
+            para.innerHTML = Number(num1.value) - Number(num2.value);
+            break;
+
+          case "/":
+            para.innerHTML = Number(num1.value) / Number(num2.value);
+            break;
+
+          case "*":
+            para.innerHTML = Number(num1.value) * Number(num2.value);
+            break;
+
+          case "%":
+            para.innerHTML = Number(num1.value) % Number(num2.value);
+            break;
+
+          default:
+            para.innerHTML = "ERROR";
+        }
+      }
+    </script>
+  </body>
+</html>
