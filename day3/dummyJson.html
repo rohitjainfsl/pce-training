@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dummy JSON</title>
+  </head>
+  <body>
+    <div id="wrapper"></div>
+
+    <script>
+      const wrapper = document.querySelector("#wrapper");
+
+      // fetch("https://dummyjson.com/products")
+      //   .then((response) => response.json())
+      //   .then((result) => {
+      //     console.log(result.products);
+      //     showData(result.products);
+      //   });
+
+      async function fetchData() {
+        const response = await fetch("https://dummyjson.com/products");
+        const result = await response.json();
+        showData(result.products);
+      }
+      fetchData();
+
+      function showData(data) {
+        // data.forEach()
+
+        for (let i = 0; i < data.length; i++) {
+          const product = document.createElement("div");
+          product.classList.add("product");
+
+          const img = document.createElement("img");
+          img.src = data[i].thumbnail;
+
+          const title = document.createElement("h3");
+          title.innerHTML = data[i].title;
+
+          const desc = document.createElement("p");
+          desc.innerHTML = data[i].description;
+
+          const price = document.createElement("p");
+          price.innerHTML = data[i].price;
+
+          product.append(img, title, desc, price);
+          wrapper.append(product);
+        }
+      }
+    </script>
+  </body>
+</html>
