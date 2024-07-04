@@ -2,6 +2,7 @@ const API_KEY = "8125db8f67d23da1d30f6063b1b794b8";
 const base_url = "https://api.themoviedb.org/3";
 const img_base_path = "https://image.tmdb.org/t/p/original";
 const main = document.querySelector("main");
+
 const headings = [
   "Netflix Originals",
   "Trending Now",
@@ -31,7 +32,8 @@ async function getDataFromAPI(url) {
 
 async function resolvePromises() {
   const finalData = await Promise.all(promises);
-  console.log(finalData);
+  //   console.log(finalData);
+  getRandomHeader(finalData[0].results);
   showMovies(finalData);
 }
 
@@ -49,7 +51,7 @@ function showMovies(data) {
     const section = document.createElement("section");
     section.classList.add("section");
 
-    obj.results.forEach((movie) => {
+    obj.results.forEach((movie, idx) => {
       const movieDiv = document.createElement("div");
       movieDiv.classList.add("movieDiv");
 
@@ -63,6 +65,27 @@ function showMovies(data) {
     moviesWrapper.append(section);
     main.append(moviesWrapper);
   });
+}
+
+function getRandomHeader(data) {
+  const startDiv = document.querySelector("#start");
+  const randomMovieName = document.querySelector("#banner h2");
+  const randomMovieDesc = document.querySelector("#banner p");
+
+  const randomTrendingMovie = data[Math.floor(Math.random() * data.length)];
+  startDiv.style.backgroundImage =
+    "url(" + img_base_path + randomTrendingMovie.backdrop_path + ")";
+  console.log(randomTrendingMovie);
+  randomMovieName.innerHTML =
+    randomTrendingMovie.title ||
+    randomTrendingMovie.original_title ||
+    randomTrendingMovie.name;
+
+  randomMovieDesc.innerHTML = trimContent(randomTrendingMovie.overview);
+}
+
+function trimContent(content) {
+  return content.length > 60 ? content.slice(0, 60) + "..." : content;
 }
 
 let promises = [];
