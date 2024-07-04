@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+}
+h1,h2,h3,h4,h5, h6{
+    font-weight: 900;
+}
+#start{
+    height: 100vh;
+}
+#start, main {
+  padding: 0.5rem 3rem;
+}
+.moviesWrapper {
+  margin-bottom: 1.5rem;
+}
+.moviesWrapper header h2 {
+  margin-bottom: 1rem;
+}
+section {
+  display: flex;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  gap: 10px;
+}
+section::-webkit-scrollbar {
+  display: none;
+}
+.movieDiv img {
+  max-height: 180px;
+  border-radius: 0.5rem;
+}
