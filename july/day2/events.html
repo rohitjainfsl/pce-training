@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Events</title>
+  </head>
+  <body>
+    <!-- <h1>PIET</h1>
+    <button>Click Me</button>
+
+    <p></p> -->
+
+    <!-- <p>Ranbir</p>
+    <p>Hrithik</p>
+    <p>Deepika</p>
+    <p>Alia</p>
+
+    <h2></h2> -->
+
+    <textarea
+      name=""
+      placeholder="Enter your message"
+      id=""
+      maxlength="280"
+    ></textarea>
+    <h2></h2>
+
+    <script>
+      //   const btn = document.querySelector("button");
+      //   const h1 = document.querySelector("h1");
+      //   const para = document.querySelector("p");
+
+      //   btn.addEventListener("click", printName);
+
+      //   function printName() {
+      //     para.innerHTML = h1.innerHTML;
+      //   }
+
+      //   const para = document.querySelectorAll("p");
+      //   //   para[0].addEventListener("click", printName);
+      //   //   para[1].addEventListener("click", printName);
+      //   //   para[2].addEventListener("click", printName);
+      //   //   para[3].addEventListener("click", printName);
+
+      //   for (let i = 0; i < para.length; i++) {
+      //     para[i].addEventListener("click", printName);
+      //   }
+
+      //   function printName(e) {
+      //     console.log(e.target.innerHTML);
+      //   }
+
+      const text = document.querySelector("textarea");
+      text.addEventListener("keyup", calclulateLength);
+      const limit = 280;
+      const h2 = document.querySelector("h2");
+
+    //   function calclulateLength(e) {
+    //     if (limit - e.target.value.length <= 50) {
+    //       h2.style.color = "red";
+    //     } else {
+    //       h2.style.color = "black";
+    //     }
+    //     h2.innerHTML = limit - e.target.value.length;
+    //   }
+
+      //OPTIMIZED VERSION
+      function calclulateLength(e) {
+        const remaining = limit - e.target.value.length;
+        if (remaining <= 50) h2.style.color = "red";
+        else h2.style.color = "black";
+        h2.innerHTML = remaining;
+      }
+    </script>
+  </body>
+</html>

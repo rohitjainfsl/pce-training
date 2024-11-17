@@ -1,0 +1,5 @@
+Trending (Top coins)
+https://api.coingecko.com/api/v3/search/trending
+
+Exchange Rate:
+https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=inr

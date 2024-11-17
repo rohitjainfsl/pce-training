@@ -1,0 +1,5 @@
+Register here and subscribe to this API: https://rapidapi.com/dickyagustin/api/text-translator2
+
+To fetch languages: https://text-translator2.p.rapidapi.com/getLanguages
+
+To translate text: https://text-translator2.p.rapidapi.com/translate

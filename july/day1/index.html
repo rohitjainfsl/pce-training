@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS 101</title>
+  </head>
+  <body>
+    <div id="wrapper"></div>
+    <script>
+      // Variables, Data Types, Operators, Loops, Functions, Strings, Arrays, HOF, Object
+
+      // var name = 1;
+
+      // let name = 'ROhit'
+
+      //SCOPE PROBLEM: variables declared with var are always global. This creates a out of scope problem.
+
+      //   {
+      //     var a = 1;
+      //     let b = 1;
+      //   }
+
+      //variable a is available outside the scope as well.
+      //variable b is not available outside the scope as well.
+
+      //MEMORY LEAK PROBLEM: can be redeclared
+      // var a = 1;
+      // var a = 2;
+
+      // let a = 1;
+      // let a = 1;
+
+      // let a = 'Tanmay';
+      // a = 'Virat'
+
+      // const a = 'Tanmay';
+      // a = 'Virat';
+
+      // console.log("Poornima");
+
+      //   console.log(10 + 10);
+
+      //   let a = "Tanmay";
+      //   let b = "Vikas";
+
+      //   console.log(a + " " + b); //CONCATENATION
+
+      //   console.log(1 + 2 + "Apples"); //3Apples
+
+      //   console.log("Apples" + 1 + 2); //Apples12
+
+      //   console.log(1 + 2 + "Mangos" + 4); //3Mangos4
+
+      //   console.log(1 + "1" + 3);
+
+      // console.log(typeof (1 + "1" + 3))
+
+      // console.log(typeof "40")
+
+      // console.log(10 + "2") //102
+      //   console.log( "2" - 10); //8
+      //   console.log( "a" - 10); //NaN
+      // console.log(10 / "2");//5
+      // console.log(10 * "2"); //20
+
+      //   console.log(10 % 3)
+
+      //   console.log(1 + false); //1
+      //   console.log(1 + true); //2
+
+      // for(let i=1000;i>=1;i--){
+
+      // }
+
+      // let i = 1000;
+      // while(i>=1){
+      //     //
+      //     i--;
+      // }
+
+      // let a = 0;
+      // a++;
+      // console.log(a); //1
+
+      //a++, ++a
+
+      //   let a = 0;
+      //   ++a;
+      //   console.log(a);
+
+      // let a = 0;
+      // console.log(a++); //0
+      // console.log(++a); //2
+      // a--;
+      // console.log(a++); //1
+      // console.log(a--); //2
+      // console.log(--a); //0
+
+      //   let i = 5;
+      //   while (i > 5) {
+      //     console.log(i);
+      //     i--;
+      //   }
+
+      //   let i = 5;
+      //   do {
+      //     console.log(i);
+      //     i--;
+      //   } while (i > 5);
+
+      //HOISTING: taking variable declarations(with var) & function definitions up top.
+
+      // a= 5;
+      // var a;
+
+      // a = 5;
+      // let a;
+
+      // console.log(a); //undefined
+      // var a = 1;
+
+      //   a = 1;
+      //   console.log(a);
+      //   var a;
+
+      // console.log(x);
+      // var x = 5;
+      // function innerScope() {
+      //   var x = 10;
+      //   console.log(x);
+      // }
+      // innerScope();
+      // console.log(x);
+
+      //   function foo() {
+      //     console.log(a);
+      //     var a = 1;
+      //     function a() {}
+      //     console.log(a);
+      //   }
+      //   foo();
+
+      //   var i;
+      //   for (i = 0; i <= 5; i++) {}
+      //   console.log(i); //6
+
+      
+    //   for (var i = 0; i <= 5; i++) {
+    //     ++i
+    //   }
+    //   console.log(i); //
+    </script>
+  </body>
+</html>

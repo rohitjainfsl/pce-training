@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Promises</title>
+  </head>
+  <body>
+    <img src="" alt="" />
+
+    <script>
+      fetch("https://randomuser.me/api/")
+        .then((response) => response.json())
+        .then((result) => showResult(result));
+
+      function showResult(result) {
+        console.log(result);
+        document.querySelector("img").src = result.results[0].picture.large;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Counter</title>
+  </head>
+  <body>
+    <div id="wrapper">
+      <button id="increment">+</button>
+      <p>0</p>
+      <button id="decrement">-</button>
+
+      <script>
+        const inc = document.querySelector("#increment");
+        const dec = document.querySelector("#decrement");
+        const para = document.querySelector("p");
+
+        inc.addEventListener("click", () => {
+          if (para.innerHTML < 10) para.innerHTML = Number(para.innerHTML) + 1;
+        });
+
+        dec.addEventListener("click", () => {
+          if (para.innerHTML > 0) para.innerHTML = Number(para.innerHTML) - 1;
+        });
+      </script>
+    </div>
+  </body>
+</html>
