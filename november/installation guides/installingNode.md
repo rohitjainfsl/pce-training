@@ -1,5 +1,5 @@
-Open Command Prompt / terminal: 
-    Press Win+R, type cmd.
+Open Command Prompt / terminal:
+Press Win+R, type cmd.
 
 Type node -v & hit enter / return.
 If you see a version number, node is already installed on your system. If not, you need to install node.
@@ -17,4 +17,6 @@ Click on _Environment Variables_ button at the bottom.
 
 In the _System Variables_ box, double click on the option _Path_
 
-Click on _New_ & type in "C:\Program Files\nodejs\" & hit OK.
+Go to _Windows (C) -> Program Files -> nodejs_, copy the path from the address bar at the top.
+
+Click on _New_ in the Edit Environment Variable Popup, paste the address you copied in the previous step & hit OK.
