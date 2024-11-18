@@ -1,4 +1,16 @@
 import express from "express";
+import cors from "cors";
+import mongoose from "mongoose";
+
+const nameSchema = new mongoose.Schema({
+  name: {
+    type: String,
+    required: true,
+  },
+});
+const nameModel = mongoose.model("name", nameSchema);
+mongoose.connect("mongodb://127.0.0.1:27017/");
+
 const app = express();
 const PORT = 3000;
 
@@ -13,18 +25,25 @@ const names = [
   },
 ];
 
+app.use(cors({ origin: "http://localhost:5174" }));
+
+// TELLING MY SERVER TO ALLOW REQUESTS WITH DATA
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
 app.get("/names", (req, res) => {
   res.send(names);
 });
 app.post("/add", (req, res) => {
-  const newName = req.body();
-  const dataToAdd = new names(newName);
+  console.log(req.body);
+  const newName = req.body;
+  const dataToAdd = new nameModel(newName);
   dataToAdd.save();
-  res.send(names);
+  res.send("Data Saved");
 });
 app.delete("/delete/:id", (req, res) => {
   const idToDelete = req.params.id;
-  names.findByIdAndDelete({ idToDelete });
+  nameModel.findByIdAndDelete({ idToDelete });
   res.send(names);
 });
 

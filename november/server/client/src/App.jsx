@@ -1,24 +1,24 @@
 import { useState } from "react";
-import "./App.css";
 import axios from "axios";
 
 function App() {
   const [name, setName] = useState("");
 
   async function handleSubmit(e) {
-    e.preventDefault();
+    e.preventDefault(); //to prevent page reload
     try {
       const response = await axios.post("http://localhost:3000/add", {
         name: name,
       });
       console.log(response);
-    } catch (error) {
-      console.log(error);
+    } catch (err) {
+      console.log(err);
     }
   }
+
   return (
     <>
-      <form action="" onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit}>
         <input
           type="text"
           placeholder="Enter a name"
@@ -30,5 +30,4 @@ function App() {
     </>
   );
 }
-
 export default App;
