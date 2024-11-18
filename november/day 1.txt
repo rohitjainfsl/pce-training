@@ -1,0 +1,41 @@
+FULL STACK DEVELOPMENT
+
+MERN
+
+Client-Server Architecture
+
+APIs
+
+Node JS
+
+NPM
+
+Installing: 
+    Node JS
+    MongoDB
+
+
+basic Node JS server
+
+Express JS
+
+
+
+GITHUB
+
+
+github.com/rohitjainfsl
+
+
+mongodb community server download
+
+
+https://www.mongodb.com/
+
+https://www.linkedin.com/in/entrep-rohit/
+
+
+
+
+OPEN Powershell as Adminstrator, and execute this command:
+Set-ExecutionPolicy - ExecutionPolicy Unrestricted
