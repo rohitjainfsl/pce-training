@@ -16,8 +16,46 @@ body {
 #root h1 {
   margin-bottom: 1rem;
 }
-
-#root input{
-    width: 500px;
+#todo {
+  display: flex;
+  gap: 1rem;
+}
+#root input,
+#root button {
+  padding: 6px 0;
+}
+#root input {
+  width: 80%;
+  padding-left: 0.25rem;
+}
+#root button {
+  width: 20%;
 }
 
+#root ul {
+  margin: 1rem 0;
+  list-style: none;
+}
+#root ul li {
+  padding: 0.25rem;
+  margin: 0.25rem 0;
+  border-radius: 0.25rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#root ul li:nth-of-type(2n) {
+  background-color: bisque;
+}
+#root ul li:nth-of-type(2n + 1) {
+  background-color: blueviolet;
+  color: #fff;
+}
+#root ul li p {
+  width: 15%;
+  display: flex;
+  justify-content: space-between;
+}
+#root ul li p span {
+  cursor: pointer;
+}

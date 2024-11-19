@@ -1,2 +1,0 @@
-Products:
-https://strapi-store-server.onrender.com/api/products
