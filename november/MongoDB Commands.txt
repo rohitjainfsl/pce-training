@@ -1,0 +1,78 @@
+show dbs - shows all databases (Dbs with no collections are not shown)
+
+use {dbname} - to create new database
+
+db - shows the current database
+
+db.createCollection('collectionName') - Creates collection
+
+show collections - Shows the collections in the current database
+
+db.collectionName.drop() - To drop(delete) the collection
+
+db.dropDatabase() - To drop(delete) the databse
+
+
+Insert One Row: (Deprecated)
+db.dbname.insert({
+    'name': 'Rohit',
+    'lang': 'JavaScript',
+    'phone': 1234567890 
+})
+
+
+db.collectionName.insertOne({}) - inserts a column
+
+db.collectionName.insertOne({
+    'name': 'Rohit',
+    'lang': 'JavaScript',
+    'phone': 1234567890 
+})
+
+db.collectionName.insertMany(
+    { name: "Ram", phone: 12345 },
+    { name: "Shyam", phone: 54321 },
+    { name: "Seeta" , phone: 12123 }
+])
+
+db.collectionName.find() - The find() method with no parameters returns all documents from a collection and returns all fields for the documents.
+
+
+db.collectionName.findOne({name: 'Rohit'}) - Find the first row matching the object
+
+
+db.collectionName.find({name:'Seeta'})
+
+ 
+db.collectionName.find( { _id: 5 } )
+
+
+db.collectionName.find( { "name.last": "Hopper" } )
+
+
+db.collectionName.find({name:'Seeta'}).limit(5)
+
+
+db.collectionName.find({name: 'Seeta'}).count()
+
+
+db.collectionName.find( { qty: { $gt: 4 } } )
+
+
+db.collectionName.find( { birth: { $gt: new Date('1950-01-01') } } )
+
+
+db.collectionName.find( { birth: { $gt: new Date('1940-01-01'), $lt: new Date('1960-01-01') } } ) //1960-01-01 (exclusive)
+
+
+db.collectionName.find(
+   { name: { $in: [ 'Mohan', 'Sohan' ] } }
+)
+
+
+db.collectionName.find(
+   { "name.last": { $regex: /^N/ } }
+) 
+//name.last field starts with the letter N (or is "LIKE N%")
+
+cls - to clear the screen
