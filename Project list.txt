@@ -1,13 +1,39 @@
 Hospital App
+    Tanisha Mahawar, Yash Verma
+
 Bookstore
+    Yash Sewda, Purwanshi Mishra, Mayank Jangid, Vaibhav Kumar Gupta
+
 Restaurant
+    Latisha, Om, Sneha, Tanisha
+
 Real Estate
+    Aniket, Himanshu
+    
 Event Management
-Todo list
+    Harsh Bansal, Alin, Atul, Anurag
+
 Expense Tracker
+    Deepanshu, Chanchal, Chandan, Aryan
+
 Car rental
+    Vidit, Vishwas, Vijendra
+
 Blogging App
+    Anirudh, Akshat, Aditi, Hardik
+
 Quiz App
+    Jatin, Abheet, Harshit, Aman
+
 Pharmacy App
+    Shivanshu Kumar, Shwet Kumar
+
 Bidding Wars
+    Vansh, Sumit, Shiv
+
 Ecommerce App
+    Kushal, Punit, Khushhal, Mohd. Sahil
+    Sameer, Shubham, Khush, Sanchit
+
+Appointment Booking
+    Divesh, Aaditya Murari, Aditya Kumar, Aadish
