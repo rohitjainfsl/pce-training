@@ -5,6 +5,7 @@
 
 import axios from "axios";
 import { useEffect, useState } from "react";
+import AddToCart from "./components/AddToCart";
 function App() {
   const [products, setProducts] = useState([]);
 
@@ -16,24 +17,34 @@ function App() {
   useEffect(() => {
     getDataFromAPI();
   }, []);
+  function trim(input) {
+    return input.length > 60 ? input.slice(0, 61) + "..." : input;
+  }
 
   return (
     <>
-      <div id="products">
-        {products.map((product) => {
-          return (
-            <div className="product" key={product.id}>
-              <a href={`/singleProduct/${product.id}`}>
-                <img src={product.image} alt="" />
-              </a>
-              <h3>
-                <a href={`/singleProduct/${product.id}`}>{product.title}</a>
-              </h3>
-              <p>${product.price}</p>
-            </div>
-          );
-        })}
-      </div>
+      {products.length > 0 ? (
+        <div id="products">
+          {products.map((product) => {
+            return (
+              <div className="product" key={product.id}>
+                <a href={`/singleProduct/${product.id}`}>
+                  <img src={product.image} alt="" />
+                </a>
+                <h3>
+                  <a href={`/singleProduct/${product.id}`}>
+                    {trim(product.title)}
+                  </a>
+                </h3>
+                <p>${product.price}</p>
+                <AddToCart product={product} />
+              </div>
+            );
+          })}
+        </div>
+      ) : (
+        <h2>Loading...</h2>
+      )}
     </>
   );
 }

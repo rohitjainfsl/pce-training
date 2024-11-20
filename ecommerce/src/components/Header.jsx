@@ -1,22 +1,24 @@
 function Header() {
   return (
     <nav>
-      <h1>Ecommerce</h1>
+      <h1>
+        <a href="/">Ecommerce</a>
+      </h1>
       <ul>
         <li>
-          <a href="">Home</a>
+          <a href="/">Home</a>
         </li>
         <li>
-          <a href="">About</a>
+          <a href="/about">About</a>
         </li>
         <li>
-          <a href="">Blog</a>
+          <a href="/blog">Blog</a>
         </li>
         <li>
-          <a href="">Cart(0)</a>
+          <a href="/cart">Cart(0)</a>
         </li>
         <li>
-          <a href="">Contact</a>
+          <a href="/contact">Contact</a>
         </li>
       </ul>
     </nav>

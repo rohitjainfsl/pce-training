@@ -1,7 +1,24 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@400;0,700;1,400;1,700;1,800;1,900&family=Roboto:wght@400;700&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+  font-weight: 400;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 700;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
 }
 #products {
   margin: 2rem 0;
@@ -12,11 +29,23 @@
 }
 .product {
   width: 23%;
+  height: 380px;
+  text-align: center;
 }
 .product img {
   width: 100%;
   height: 50%;
+  max-width: 200px;
+  max-height: 240px;
   object-fit: contain;
+  margin-bottom: 1rem;
+}
+.product h3 {
+  font-size: 16px;
+  margin-bottom: 0.5rem;
+}
+.product p{
+  margin-bottom: 0.5rem;
 }
 nav {
   display: flex;
@@ -30,10 +59,8 @@ nav h1 {
 }
 nav ul {
   display: flex;
-  list-style: none;
 }
 nav ul a {
-  text-decoration: none;
   padding: 0 0.25rem;
   margin: 0 0.25rem;
   font-size: 18px;
@@ -64,4 +91,18 @@ footer {
 .left img {
   width: 60%;
   object-fit: contain;
+}
+
+.addToCart button {
+  border: 2px solid #155f15;
+  background-color: #155f15;
+  padding: 6px 15px;
+  border-radius: 10px;
+  color: blanchedalmond;
+  cursor: pointer;
+  transition: all 350ms;
+}
+.addToCart button:hover {
+  background-color: #fff;
+  color: #155f15;
 }
