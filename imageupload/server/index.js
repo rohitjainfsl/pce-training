@@ -6,9 +6,9 @@ import multer from "multer";
 const app = express();
 const PORT = 5000;
 cloudinary.config({
-  cloud_name: "ddadanczt",
-  api_key: "961497967514558",
-  api_secret: "JKzE2spt6Kr81v5pBNHL9c7iEjo", // Click 'View API Keys' above to copy your API secret
+  cloud_name: ,
+  api_key: ,
+  api_secret: , // Click 'View API Keys' above to copy your API secret
 });
 //MIDDLEWARE - MULTER which can hijack network requests & responses
 
