@@ -19,13 +19,17 @@ function App() {
 
   return (
     <>
-      <h1>Ecommerce</h1>
       <div id="products">
         {products.map((product) => {
           return (
             <div className="product" key={product.id}>
-              <img src={product.image} alt="" />
-              <h3>{product.title}</h3>
+              <a href={`/singleProduct/${product.id}`}>
+                <img src={product.image} alt="" />
+              </a>
+              <h3>
+                <a href={`/singleProduct/${product.id}`}>{product.title}</a>
+              </h3>
+              <p>${product.price}</p>
             </div>
           );
         })}
