@@ -5,7 +5,6 @@ const UserSchema = new Schema(
   {
     name: {
       type: String,
-      required: true,
       minlength: 4,
       maxlength: 30,
     },
@@ -23,7 +22,6 @@ const UserSchema = new Schema(
     },
     gender: {
       type: String,
-      required: true,
       enum: ["male", "female", "other"],
     },
     password: {
@@ -34,7 +32,6 @@ const UserSchema = new Schema(
     },
     phoneNumber: {
       type: String,
-      required: true,
       validate: {
         validator: function (v) {
           return /^\d{10}$/.test(v);

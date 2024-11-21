@@ -35,13 +35,14 @@ export async function registerUser(req, res) {
 }
 
 export async function loginUser(req, res) {
+  console.log("hello");
   try {
     const { email, password } = req.body;
 
     // Check if email is correct
     const emailExists = await User.findOne({ email });
     if (!emailExists) {
-      return res.status(404).json({ message: "Invalid Email" });
+      return res.status(500).json({ message: "Invalid Email" });
     }
 
     //Check if password is correct
@@ -51,7 +52,7 @@ export async function loginUser(req, res) {
       return res.status(200).json({ message: "Login Successful" });
     }
 
-    res.status(404).json({
+    res.status(500).json({
       message: "Password Do not match",
     });
   } catch (error) {
