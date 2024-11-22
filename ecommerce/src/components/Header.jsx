@@ -1,24 +1,28 @@
+import { Link } from "react-router-dom";
+import { useAppContext } from "../context/AppContext";
+
 function Header() {
+  const { cart } = useAppContext();
   return (
     <nav>
       <h1>
-        <a href="/">Ecommerce</a>
+        <Link to="/">Ecommerce</Link>
       </h1>
       <ul>
         <li>
-          <a href="/">Home</a>
+          <Link to="/">Home</Link>
         </li>
         <li>
-          <a href="/about">About</a>
+          <Link to="/about">About</Link>
         </li>
         <li>
-          <a href="/blog">Blog</a>
+          <Link to="/blog">Blog</Link>
         </li>
         <li>
-          <a href="/cart">Cart(0)</a>
+          <Link to="/cart">Cart({cart.length})</Link>
         </li>
         <li>
-          <a href="/contact">Contact</a>
+          <Link to="/contact">Contact</Link>
         </li>
       </ul>
     </nav>

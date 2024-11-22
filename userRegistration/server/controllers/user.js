@@ -35,7 +35,6 @@ export async function registerUser(req, res) {
 }
 
 export async function loginUser(req, res) {
-  console.log("hello");
   try {
     const { email, password } = req.body;
 

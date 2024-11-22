@@ -30,7 +30,7 @@ function SingleProduct() {
             <p>Category: {singleProduct.category}</p>
             <p>{singleProduct.description}</p>
             <p>{singleProduct.price}</p>
-            <AddToCart />
+            <AddToCart product={singleProduct} />
           </div>
         </div>
       ) : (
